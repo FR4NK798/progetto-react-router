@@ -1,20 +1,17 @@
-import { useEffect, useState } from 'react'
-import { useParams, useNavigate } from 'react-router-dom'
-import Card from "react-bootstrap/Card"
+import { useEffect, useState } from "react";
+import { useParams, useNavigate } from "react-router-dom";
+import Card from "react-bootstrap/Card";
 import Row from "react-bootstrap/Row"
 import Col from "react-bootstrap/Col"
+import Container from "react-bootstrap/Container"
 
+const MovieDeatails = () => {
+  const [movieObj, setMovieObj] = useState(null);
 
-const MovieDeatails =()=>{
-
-    const[movieObj,setMovieObj]=useState(null)
-
-    const params = useParams()
-    console.log('PARAMS', params.movieId)
-    const navigate = useNavigate()
-    // console.log("navigate", navigate)
-
-
+  const params = useParams();
+  console.log("PARAMS", params.movieId);
+  const navigate = useNavigate();
+  // console.log("navigate", navigate)
 
   const fetchMovies = () => {
     const endPoint = "http://www.omdbapi.com/?apikey=6af926ba&i=";
@@ -37,7 +34,7 @@ const MovieDeatails =()=>{
         //   movies: arrayMoviesSelected,
         // });
 
-        setMovieObj(object)
+        setMovieObj(object);
         // console.log("object dopo state titolo", object.Search[0].Title);
         // console.log("this state movies: ", this.state.movies);
       })
@@ -46,48 +43,39 @@ const MovieDeatails =()=>{
       });
   };
 
-  useEffect(()=>{
-    fetchMovies()
-    console.log("useEffect")
-  },[])
+  useEffect(() => {
+    fetchMovies();
+    console.log("useEffect");
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
-    return(
-        <Row>
+  return (
+    <>
+      {movieObj && (
+        <Container>
+          <Row>
             <Col>
-     
-      <Card.Img variant="top" src={movieObj.Poster} style={{ width: '18rem' }}/>
-      </Col>
-      <Col>
-   
-        <Card.Title className="text-light">{movieObj.Title}</Card.Title>
+          <img src={movieObj.Poster} />
+          </Col>
+          <Col>
+          <h1 className="text-light">{movieObj.Title}</h1>
+          <h2>{movieObj.Actors}</h2>
 
-        <Card.Text className="text-light">
-        {movieObj.Actors}
-        </Card.Text>
+          <h2>{movieObj.Awards}</h2>
 
-        <Card.Text className="text-light">
-        {movieObj.Awards}
-        </Card.Text>
+          <h2>{movieObj.BoxOffice}</h2>
 
-        <Card.Text className="text-light">
-        {movieObj.BoxOffice}
-        </Card.Text>
+          <h2>{movieObj.Country}</h2>
 
-        <Card.Text className="text-light">
-        {movieObj.Country}
-        </Card.Text>
+          <h2>{movieObj.Director}</h2>
 
-        <Card.Text className="text-light">
-        {movieObj.Director}
-        </Card.Text>
-
-        <Card.Text className="text-light">
-        {movieObj.Genre}
-        </Card.Text>
-
-   
-        </Col>
-    </Row>
-    )
-}
-export default MovieDeatails
+          <h2>{movieObj.Genre}</h2>
+          </Col>
+          </Row>
+          </Container>
+        
+      )}
+    </>
+  );
+};
+export default MovieDeatails;
