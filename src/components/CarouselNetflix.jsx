@@ -49,6 +49,9 @@ class CarouselNetflix extends Component {
           {this.state.movies.map((movie) => {
             return (
               <div className="col mb-2 text-center px-1" key={movie.imdbID} style={{ height: "9.5em" }}>
+                {
+                  console.log("movie.imdbID", movie.imdbID)
+                }
                 <Link to={'/details/' + movie.imdbID}>
                 <Image
                   src={movie.Poster}
