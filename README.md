@@ -2,9 +2,8 @@
 
 Progetto incentrato sullo sviluppo delle funzionalità React-Router-Dom della copia di Netflix
 
-<img width="1280" alt="Schermata 2024-11-28 alle 22 25 22" src="https://github.com/user-attachments/assets/9e24b6f1-94d3-4070-a77f-d52108f0207e">
-<img width="1280" alt="Schermata 2024-11-28 alle 22 25 27" src="https://github.com/user-attachments/assets/73a0d628-a427-44f3-ac2e-7027d30108c7">
-
+<img width="1280" alt="Schermata 2024-11-28 alle 22 25 22" src="https://github.com/user-attachments/assets/0cc175ea-fe9d-4b06-b0c7-cd1b730b5ea5">
+<img width="1280" alt="Schermata 2024-11-28 alle 22 25 27" src="https://github.com/user-attachments/assets/9f5adedf-c95f-44d2-ac8a-7adb9904b406">
 
 # Getting Started with Create React App
 
