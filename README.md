@@ -1,3 +1,11 @@
+# Progetto copia Netflix
+
+Progetto incentrato sullo sviluppo delle funzionalità React-Router-Dom della copia di Netflix
+
+<img width="1280" alt="Schermata 2024-11-28 alle 22 25 22" src="https://github.com/user-attachments/assets/9e24b6f1-94d3-4070-a77f-d52108f0207e">
+<img width="1280" alt="Schermata 2024-11-28 alle 22 25 27" src="https://github.com/user-attachments/assets/73a0d628-a427-44f3-ac2e-7027d30108c7">
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
